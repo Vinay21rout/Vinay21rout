@@ -19,38 +19,10 @@ vinay = {
 
 ## ⚡ Recent Activity
 <!-- ACTIVITY_LOG_START -->
-- 📝 Pushed to `Vinay21rout`: *"feat: design rolling HTML chat bubble UI and clean metrics clutter"*
-- 🐞 Closed Issue [#2](https://github.com/Vinay21rout/Vinay21rout/issues/2) in `Vinay21rout`: *"chat:What are your skills?"*
-- 🆕 Created repository `Vinay21rout`
+- 🌿 Created branch `main` in `Vinay21rout`
+- 🌿 Created branch `main` in `30DaysOfAI`
+- 🌿 Created branch `main` in `Decodelabs-AI-Internship`
 <!-- ACTIVITY_LOG_END -->
-
----
-
-## 🤖 Profile Bot Q&A
-Ask my automated profile bot a question. Click a link below to open a pre-filled issue, and the bot will reply within seconds:
-
-- 💬 [Ask: "What are your skills? 🛠️"](https://github.com/Vinay21rout/Vinay21rout/issues/new?title=chat:What+are+your+skills%3F&body=Click+Submit+to+trigger+the+bot!)
-- 🚀 [Ask: "Tell me about your projects!"](https://github.com/Vinay21rout/Vinay21rout/issues/new?title=chat:Tell+me+about+your+projects&body=Click+Submit+to+trigger+the+bot!)
-- 💼 [Ask: "What is your work experience?"](https://github.com/Vinay21rout/Vinay21rout/issues/new?title=chat:What+internships+have+you+done%3F&body=Click+Submit+to+trigger+the+bot!)
-- 🎓 [Ask: "What is your education?"](https://github.com/Vinay21rout/Vinay21rout/issues/new?title=chat:What+is+your+education%3F&body=Click+Submit+to+trigger+the+bot!)
-- ✍️ [Ask a Custom Question](https://github.com/Vinay21rout/Vinay21rout/issues/new?title=chat:Your+Question+Here&body=Type+your+question+in+the+issue+title+above+(keep+the+%22chat:%22+prefix)+and+click+Submit+to+send+it!)
-
-#### 💬 Latest Chatbot Interaction
-<!-- CHATBOT_LOG_START -->
-<table width="100%" cellpadding="8" cellspacing="0" border="0">
-  <tr>
-    <td align="left" bgcolor="#161b22" style="border-bottom: 1px solid #21262d;">
-      👤 <b>@Guest</b>: <i>"Hello bot!"</i>
-    </td>
-  </tr>
-  <tr>
-    <td align="left" bgcolor="#0d1117" style="border-bottom: 1px solid #21262d; padding-left: 20px;">
-      🤖 <b>Profile Bot</b>:<br>
-      Hi! I'm Vinay's Profile Bot. Click any of the quick queries above to ask me questions about his projects, skills, experience, or education.
-    </td>
-  </tr>
-</table>
-<!-- CHATBOT_LOG_END -->
 
 ---
 
@@ -98,16 +70,19 @@ Ask my automated profile bot a question. Click a link below to open a pre-filled
 
 ---
 
-## 📊 Analytics
-
-<p align="center">
-  <a href="https://github.com/Vinay21rout">
-    <img src="https://github-readme-stats.vercel.app/api?username=Vinay21rout&show_icons=true&theme=tokyonight&count_private=true&hide_border=true" alt="GitHub Stats" width="60%"/>
-  </a>
-</p>
+## 📊 GitHub Metrics
+<!-- STATS_LOG_START -->
+- **Public Repositories**: 23
+- **Total Stars Received**: 0
+- **Forks Created (Own Repos)**: 0
+- **Followers**: 0
+- **Primary Languages**: Python, Jupyter Notebook, HTML, JavaScript, CSS
+<!-- STATS_LOG_END -->
 
 ---
 
-<p align="center">
-  <img src="https://github-readme-quotes.herokuapp.com/quote?theme=tokyonight&animation=true" alt="Daily developer quote" />
-</p>
+## 🤝 Connect with Me
+
+- 📧 **Email**: [vinayrout02@gmail.com](mailto:vinayrout02@gmail.com)
+- 🔗 **LinkedIn**: [linkedin.com/in/vinay-kumar-rout-4798372a9](https://linkedin.com/in/vinay-kumar-rout-4798372a9)
+- 🐙 **GitHub**: [github.com/Vinay21rout](https://github.com/Vinay21rout)
