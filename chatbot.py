@@ -124,7 +124,7 @@ def main():
             f"Hi @{sender}! Thanks for reaching out.\n\n"
             "I'm a simple rule-based chatbot running on GitHub Actions. I didn't quite catch that question.\n\n"
             "Try asking me about:\n"
-            "- **Projects** (e.g., *RecruiterIQ*, *DB-Agent*, *RAG Chatbot*, *PPE OpenCV*)\n"
+            "- **Projects** (e.g., *RecruiterIQ*, *DB-Agent*, *PPE*, *highway-vehicle-detection*)\n"
             "- **Skills** (e.g., *CrewAI*, *Streamlit*, *AutoGluon*, *n8n*)\n"
             "- **Education & Internships**\n"
             "- **Contact info**"
@@ -158,7 +158,64 @@ def main():
     except Exception as e:
         print(f"Error closing issue: {e}")
 
-    # Update README with latest interaction
+    # Manage rolling chat history in JSON
+    history_file = "chat_history.json"
+    history = []
+    if os.path.exists(history_file):
+        try:
+            with open(history_file, "r", encoding="utf-8") as f:
+                history = json.load(f)
+        except Exception as e:
+            print(f"Error reading history file: {e}")
+            history = []
+
+    # Add new item
+    history.append({
+        "sender": sender,
+        "query": original_query,
+        "answer": response,
+        "issue_number": int(issue_number)
+    })
+
+    # Slice to last 3 entries
+    history = history[-3:]
+
+    # Save history back to JSON
+    try:
+        with open(history_file, "w", encoding="utf-8") as f:
+            json.dump(history, f, indent=2, ensure_ascii=False)
+        print("Updated chat_history.json ledger.")
+    except Exception as e:
+        print(f"Error writing history file: {e}")
+
+    # Build HTML chat terminal representation
+    html_lines = ['<table width="100%" cellpadding="8" cellspacing="0" border="0">']
+    for idx, chat in enumerate(history):
+        user_name = chat["sender"]
+        q = chat["query"]
+        ans = chat["answer"].replace("\n", "<br>").replace("  ", "&nbsp;&nbsp;")
+        num = chat["issue_number"]
+        
+        # User message row
+        html_lines.append('  <tr>')
+        html_lines.append('    <td align="left" bgcolor="#161b22" style="border-bottom: 1px solid #21262d;">')
+        html_lines.append(f'      👤 <b>@{user_name}</b>: <i>"{q}"</i>')
+        html_lines.append('    </td>')
+        html_lines.append('  </tr>')
+        
+        # Bot response row
+        html_lines.append('  <tr>')
+        html_lines.append('    <td align="left" bgcolor="#0d1117" style="border-bottom: 1px solid #21262d; padding-left: 20px;">')
+        html_lines.append(f'      🤖 <b>Profile Bot</b>:<br>')
+        html_lines.append(f'      {ans}')
+        html_lines.append(f'      <br><br>')
+        html_lines.append(f'      <sub><a href="https://github.com/{repo}/issues/{num}">View thread #{num}</a></sub>')
+        html_lines.append('    </td>')
+        html_lines.append('  </tr>')
+    html_lines.append('</table>')
+    html_content = "\n".join(html_lines)
+
+    # Update README with latest interaction HTML
     readme_path = "README.md"
     if os.path.exists(readme_path):
         try:
@@ -172,20 +229,19 @@ def main():
                 start_idx = content.find(start_tag) + len(start_tag)
                 end_idx = content.find(end_tag)
 
-                new_log = f"\n🗣️ **Recent Query:** @{sender} asked: *\"{original_query}\"*<br>🤖 **Bot Reply:** *\"{response.splitlines()[0]}... [view full answer in issue #{issue_number}](https://github.com/{repo}/issues/{issue_number})\"*\n"
-                updated_content = content[:start_idx] + new_log + content[end_idx:]
+                updated_content = content[:start_idx] + "\n" + html_content + "\n" + content[end_idx:]
 
                 with open(readme_path, "w", encoding="utf-8") as f:
                     f.write(updated_content)
-                print("Updated README.md log.")
+                print("Updated README.md log with HTML chat bubbles.")
 
                 # Commit changes back
                 subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"], check=True)
                 subprocess.run(["git", "config", "--global", "user.email", "41898282+github-actions[bot]@users.noreply.github.com"], check=True)
-                subprocess.run(["git", "add", "README.md"], check=True)
+                subprocess.run(["git", "add", "README.md", "chat_history.json"], check=True)
                 subprocess.run(["git", "commit", "-m", "chore: update chatbot conversation log [skip ci]"], check=True)
                 subprocess.run(["git", "push"], check=True)
-                print("Committed and pushed README.md update.")
+                print("Committed and pushed README.md & chat_history.json updates.")
             else:
                 print("Chatbot tags not found in README.md.")
         except Exception as e:

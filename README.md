@@ -18,7 +18,19 @@ Chat with my automated profile bot. Click any link below to open a pre-filled is
 
 #### 💬 Latest Chatbot Interaction
 <!-- CHATBOT_LOG_START -->
-🗣️ **Recent Query:** None yet! Click one of the links above to ask a question.
+<table width="100%" cellpadding="8" cellspacing="0" border="0">
+  <tr>
+    <td align="left" bgcolor="#161b22" style="border-bottom: 1px solid #21262d;">
+      👤 <b>@Guest</b>: <i>"Hello bot!"</i>
+    </td>
+  </tr>
+  <tr>
+    <td align="left" bgcolor="#0d1117" style="border-bottom: 1px solid #21262d; padding-left: 20px;">
+      🤖 <b>Profile Bot</b>:<br>
+      Hi! I'm Vinay's Profile Bot. Click any of the quick queries above to ask me questions about his projects, skills, experience, or education.
+    </td>
+  </tr>
+</table>
 <!-- CHATBOT_LOG_END -->
 
 ---
@@ -76,7 +88,7 @@ I am a 3rd-year B.Tech CSE (AI/ML Specialization) student at **O.P. Jindal Unive
 
 ---
 
-### 📊 GitHub Metrics & Activity
+### 📊 GitHub Analytics
 
 <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
@@ -91,20 +103,7 @@ I am a 3rd-year B.Tech CSE (AI/ML Specialization) student at **O.P. Jindal Unive
       </a>
     </td>
   </tr>
-  <tr>
-    <td align="center" colspan="2" style="padding-top: 15px;">
-      <a href="https://github.com/Vinay21rout">
-        <img src="https://github-readme-streak-stats.herokuapp.com/?user=Vinay21rout&theme=tokyonight&hide_border=true" alt="GitHub Streak" width="98%"/>
-      </a>
-    </td>
-  </tr>
 </table>
-
-<p align="center" style="margin-top: 15px;">
-  <a href="https://github.com/Vinay21rout">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=Vinay21rout&theme=tokyonight" alt="Activity Graph" width="100%"/>
-  </a>
-</p>
 
 ---
 
