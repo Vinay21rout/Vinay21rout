@@ -3,10 +3,14 @@ name: Profile Chatbot
 on:
   issues:
     types: [opened]
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
 
 jobs:
   reply:
-    if: startsWith(github.event.issue.title, 'chat:')
+    # Run if it's not an issue event, or if it is an issue event starting with 'chat:'
+    if: github.event_name != 'issues' || startsWith(github.event.issue.title, 'chat:')
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -22,6 +26,7 @@ jobs:
 
       - name: Run Chatbot Script
         env:
+          EVENT_NAME: ${{ github.event_name }}
           ISSUE_TITLE: ${{ github.event.issue.title }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           ISSUE_SENDER: ${{ github.event.issue.user.login }}
