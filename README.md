@@ -21,7 +21,6 @@ vinay = {
 <!-- ACTIVITY_LOG_START -->
 - 🌿 Created branch `main` in `Vinay21rout`
 - 🌿 Created branch `main` in `30DaysOfAI`
-- 🌿 Created branch `main` in `Decodelabs-AI-Internship`
 <!-- ACTIVITY_LOG_END -->
 
 ---
