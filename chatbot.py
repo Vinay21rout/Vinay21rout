@@ -30,7 +30,7 @@ def main():
         response = (
             f"Hi @{sender}! 👋 I am Vinay's automated Profile Bot.\n\n"
             "I'm here to help you navigate his portfolio. You can ask me about:\n"
-            "- **Projects** (e.g., *RecruiterIQ*, *DB-Agent*, *RAG Chatbot*, *PPE OpenCV*)\n"
+            "- **Projects** (e.g., *RecruiterIQ*, *DB-Agent*, *PPE*, *highway-vehicle-detection*)\n"
             "- **Skills** (e.g., *CrewAI*, *Streamlit*, *AutoGluon*, *n8n*)\n"
             "- **Education** & **Internships**\n"
             "- **Contact info**\n\n"
@@ -38,27 +38,35 @@ def main():
         )
     
     # 2. Projects
-    elif any(k in query for k in ["project", "portfolio", "recruiteriq", "db-agent", "rag", "ppe", "object detection"]):
+    elif any(k in query for k in ["project", "portfolio", "recruiteriq", "db-agent", "rag", "ppe", "object detection", "mcp", "speed", "vehicle", "annonymizer", "color"]):
         response = (
-            f"Hi @{sender}! Vinay has built several cool AI & automation projects:\n\n"
-            "1. **RecruiterIQ**: An autonomous multi-agent recruitment pipeline built using **CrewAI**, LangChain, FastAPI, and Streamlit. It parses resumes, scores candidates, and automates email workflows.\n"
-            "2. **DB-Agent**: A natural language interface to SQL databases built using **LangGraph** for multi-step query generation and schema validation.\n"
-            "3. **RAG-Based AI Chatbot**: A document intelligence system utilizing **FAISS / ChromaDB** and LangSmith for tracing/evaluation.\n"
-            "4. **PPE-Detection**: A Computer Vision pipeline using **OpenCV** to detect safety violation events (No Helmet/No Vest) with ~91% accuracy.\n\n"
-            "Which one of these would you like to explore?"
+            f"Hi @{sender}! Vinay has structured his repositories into three main categories:\n\n"
+            "🤖 **Agentic & GenAI Architectures**:\n"
+            "- **RecruiterIQ**: Autonomous recruitment pipeline using CrewAI, LangChain, and Streamlit.\n"
+            "- **DB-Agent**: Natural language to SQL parser built using LangGraph workflows.\n"
+            "- **EDA_intelligence_Agent**: Conversational agent for loading and analyzing datasets.\n"
+            "- **Chatbot_with_mcp**: Chatbot implementing Model Context Protocol (MCP).\n\n"
+            "👁️ **Computer Vision & Image Tracking**:\n"
+            "- **PPE-Detection-System**: Safety violation detection (No Helmet/No Vest) with ~91% accuracy.\n"
+            "- **highway-vehicle-detection-polynomial**: Speed tracking and polynomial ROI mapping in OpenCV.\n"
+            "- **face-annonymizer**: Real-time privacy blurring of camera streams.\n\n"
+            "🗂️ **RAG & System Automation**:\n"
+            "- **RAG-Based-Chatbot** / **RAG-with-LangGraph**: Dense document Q&A pipelines using FAISS/ChromaDB.\n"
+            "- **N8N-Automation**: Self-hosted n8n workflows for automated scraping and alerts.\n\n"
+            "Which area or project would you like to discuss?"
         )
         
     # 3. Skills
     elif any(k in query for k in ["skill", "tech", "language", "crewai", "autogluon", "streamlit", "n8n", "tool", "stack"]):
         response = (
-            f"Hi @{sender}! Here is a summary of Vinay's technical toolbox:\n\n"
-            "- **GenAI & Agents**: LangChain, LangGraph, CrewAI, Prompt Engineering\n"
-            "- **Workflow Automation**: n8n (multi-step loops, scheduled alerts)\n"
-            "- **Machine Learning**: Fundamentals of Scikit-Learn and AutoGluon (AutoML)\n"
-            "- **Computer Vision**: OpenCV (object tracking, image processing)\n"
-            "- **Languages**: Python, SQL, C++\n"
-            "- **Prototyping & Web**: Streamlit, MySQL, HTML/CSS\n\n"
-            "He specializes in orchestrating AI agents and automated workflows."
+            f"Hi @{sender}! Here is Vinay's verified technical skillset directly from his resume:\n\n"
+            "- **GenAI & Agentic AI**: LangChain, LangGraph, RAG, Prompt Engineering, LangSmith, LLM API Integration, CrewAI\n"
+            "- **Machine Learning**: Fundamentals of Scikit-Learn and AutoGluon (AutoML) including Regression, Classification, Clustering, Feature Engineering, and Model Evaluation\n"
+            "- **Computer Vision**: OpenCV (object tracking, real-time ROI annotation, image processing)\n"
+            "- **Vector Databases**: FAISS, ChromaDB\n"
+            "- **Workflow Automation**: n8n\n"
+            "- **Languages**: Python, SQL\n"
+            "- **Databases & Tools**: MySQL, Firebase, NumPy, Pandas, Matplotlib, Streamlit, Git, GitHub, Jupyter Notebook, Google Colab, VS Code, HTML, CSS"
         )
 
     # 4. Education
