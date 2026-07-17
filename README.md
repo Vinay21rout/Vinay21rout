@@ -8,6 +8,12 @@
   <h1 style="margin: 0; font-size: 2.2em; color: #7c3aed; font-family: 'Inter', sans-serif; letter-spacing: -0.5px;">I BUILD AUTONOMOUS AI SYSTEMS</h1>
   <p style="margin: 5px 0 10px 0; font-size: 1.2em; color: #a78bfa;"><b>GenAI • Agentic AI • LangGraph • CrewAI • MCP • n8n</b></p>
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=3000&pause=1000&color=9061F9&background=00000000&center=true&vCenter=true&width=500&lines=GenAI+Engineer;Machine+Learning+Intern;Agentic+AI+Developer;Computer+Vision+Enthusiast;Open+Source+Learner" alt="Typing SVG" />
+  
+  <br><br>
+  
+  <a href="https://linkedin.com/in/vinay-kumar-rout-4798372a9" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="mailto:vinayrout02@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="https://github.com/Vinay21rout" target="_blank"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
 </div>
 
 ---
@@ -35,8 +41,8 @@ Hi 👋 I'm **Vinay Kumar Rout**, a B.Tech AI/ML student at **O.P. Jindal Univer
       <strong style="font-size: 1.5em; color: #10b981;"><!-- DYNAMIC_REPOS_VAL -->25<!-- DYNAMIC_REPOS_VAL_END --></strong>
     </td>
     <td align="center" width="25%" style="background: #111827; border: 1px solid #374151; border-radius: 6px; padding: 10px;">
-      <span style="color: #9ca3af; font-size: 0.9em;">Hackathons</span><br>
-      <strong style="font-size: 1.5em; color: #10b981;">7+</strong>
+      <span style="color: #9ca3af; font-size: 0.9em;">Hackathons Entered</span><br>
+      <strong style="font-size: 1.5em; color: #10b981;">10+</strong>
     </td>
     <td align="center" width="25%" style="background: #111827; border: 1px solid #374151; border-radius: 6px; padding: 10px;">
       <span style="color: #9ca3af; font-size: 0.9em;">CGPA</span><br>
@@ -80,11 +86,33 @@ Hi 👋 I'm **Vinay Kumar Rout**, a B.Tech AI/ML student at **O.P. Jindal Univer
 
 ---
 
-## 🛠️ Scannable Tech Stack
+## 🛠️ Visual Tech Stack
 
-- **Artificial Intelligence**: Python • LangChain • LangGraph • CrewAI • OpenAI • Gemini • Groq
-- **ML & Computer Vision**: Scikit-Learn • Pandas • NumPy • OpenCV
-- **Backend & Automation**: n8n • FastAPI • Firebase • Git • Docker
+#### 🧠 GenAI & Agentic Frameworks
+![LangGraph](https://img.shields.io/badge/LangGraph-9061F9?style=flat-square&logo=git&logoColor=white)
+![CrewAI](https://img.shields.io/badge/CrewAI-3b82f6?style=flat-square)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3A?style=flat-square&logo=chainlink&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini-8E75C2?style=flat-square&logo=google-gemini&logoColor=white)
+![Groq](https://img.shields.io/badge/Groq-f59e0b?style=flat-square)
+
+#### 📊 Machine Learning & CV
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit_Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+
+#### ⚡ Databases, Web & DevOps
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![n8n](https://img.shields.io/badge/n8n-FF6C37?style=flat-square&logo=n8n&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 
 ---
 
@@ -98,10 +126,14 @@ Hi 👋 I'm **Vinay Kumar Rout**, a B.Tech AI/ML student at **O.P. Jindal Univer
 
 ## 📚 Skill Progression
 
-- **LangGraph** `██████████` 100%
-- **CrewAI** `█████████░` 90%
-- **MCP** `████████░░` 80%
-- **Docker** `█████░░░░░` 50%
+- **LangGraph & Cyclical Agents** `██████████` 100%
+- **CrewAI Multi-Agent Systems** `█████████░` 90%
+- **n8n Workflow Automation** `█████████░` 90%
+- **Vector Databases (FAISS/Chroma)** `████████░░` 80%
+- **MCP (Model Context Protocol)** `████████░░` 80%
+- **OpenCV & Computer Vision** `███████░░░` 70%
+- **Full-Stack AI Products** `███████░░░` 70%
+- **Docker Containerization** `█████░░░░░` 50%
 
 ---
 
@@ -142,16 +174,16 @@ Hi 👋 I'm **Vinay Kumar Rout**, a B.Tech AI/ML student at **O.P. Jindal Univer
 ---
 
 <!-- LAST_UPDATED_START -->
-🕒 *Last synced on: Friday, Jul 17, 2026 at 09:33 AM (IST)*
+🕒 *Last synced on: Friday, Jul 17, 2026 at 09:38 AM (IST)*
 <!-- LAST_UPDATED_END -->
 
 <div align="center">
   <p><i>"I don't build AI demos. I build AI systems capable of solving real-world problems through reasoning, automation and collaboration."</i></p>
   
   <p>
-    <a href="mailto:vinayrout02@gmail.com"><img src="https://img.shields.io/badge/Email-vinayrout02%40gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white" /></a>
-    <a href="https://linkedin.com/in/vinay-kumar-rout-4798372a9"><img src="https://img.shields.io/badge/LinkedIn-Vinay%20Kumar%20Rout-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
-    <a href="https://github.com/Vinay21rout"><img src="https://img.shields.io/badge/GitHub-Vinay21rout-181717?style=flat-square&logo=github&logoColor=white" /></a>
+    <a href="https://linkedin.com/in/vinay-kumar-rout-4798372a9" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+    <a href="mailto:vinayrout02@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+    <a href="https://github.com/Vinay21rout" target="_blank"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
   </p>
   
   <img src="https://komarev.com/ghpvc/?username=Vinay21rout&color=7c3aed" alt="Visitor Count" />
