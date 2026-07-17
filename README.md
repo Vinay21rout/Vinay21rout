@@ -5,20 +5,9 @@
 -->
 
 <div align="center">
-  <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
-    <tr>
-      <td width="120" align="center" valign="middle" style="border: none;">
-        <a href="https://github.com/Vinay21rout">
-          <img src="https://github.com/Vinay21rout.png" width="100" height="100" style="border-radius: 50%; border: 3px solid #7c3aed; box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4);" alt="Vinay Kumar Rout" />
-        </a>
-      </td>
-      <td align="left" valign="middle" style="border: none; padding-left: 20px;">
-        <h1 style="margin: 0; font-size: 1.8em; color: #7c3aed; font-family: 'Inter', sans-serif;">I BUILD AUTONOMOUS AI SYSTEMS</h1>
-        <p style="margin: 3px 0 8px 0; font-size: 1em; color: #a78bfa;"><b>GenAI • Agentic AI • LangGraph • CrewAI • MCP • n8n</b></p>
-        <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&duration=3000&pause=1000&color=9061F9&background=00000000&center=false&vCenter=true&width=450&lines=GenAI+Engineer;Machine+Learning+Intern;Agentic+AI+Developer;Computer+Vision+Enthusiast;Open+Source+Learner" alt="Typing SVG" />
-      </td>
-    </tr>
-  </table>
+  <h1 style="margin: 0; font-size: 2.2em; color: #7c3aed; font-family: 'Inter', sans-serif; letter-spacing: -0.5px;">I BUILD AUTONOMOUS AI SYSTEMS</h1>
+  <p style="margin: 5px 0 10px 0; font-size: 1.2em; color: #a78bfa;"><b>GenAI • Agentic AI • LangGraph • CrewAI • MCP • n8n</b></p>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=3000&pause=1000&color=9061F9&background=00000000&center=true&vCenter=true&width=500&lines=GenAI+Engineer;Machine+Learning+Intern;Agentic+AI+Developer;Computer+Vision+Enthusiast;Open+Source+Learner" alt="Typing SVG" />
 </div>
 
 ---
@@ -153,7 +142,7 @@ Hi 👋 I'm **Vinay Kumar Rout**, a B.Tech AI/ML student at **O.P. Jindal Univer
 ---
 
 <!-- LAST_UPDATED_START -->
-🕒 *Last synced on: Friday, Jul 17, 2026 at 09:31 AM (IST)*
+🕒 *Last synced on: Friday, Jul 17, 2026 at 09:33 AM (IST)*
 <!-- LAST_UPDATED_END -->
 
 <div align="center">
