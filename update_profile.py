@@ -2,6 +2,7 @@ import os
 import json
 import urllib.request
 import subprocess
+from datetime import datetime, timedelta, timezone
 
 def fetch_data(url, token):
     req = urllib.request.Request(
@@ -81,6 +82,33 @@ def fetch_recent_activity(token):
         
     return "\n".join(f"- {act}" for act in activities)
 
+def fetch_latest_repos(token):
+    # Fetch repos sorted by updated time
+    repos = fetch_data("https://api.github.com/users/Vinay21rout/repos?per_page=15&sort=updated", token)
+    if not repos:
+        return "- No recent repository activity found."
+        
+    lines = []
+    count = 0
+    for r in repos:
+        if count >= 5:
+            break
+        if r.get("fork", False):
+            continue
+            
+        name = r.get("name")
+        html_url = r.get("html_url")
+        desc = r.get("description") or "Building intelligent systems."
+        stars = r.get("stargazers_count", 0)
+        lang = r.get("language") or "Python"
+        
+        lines.append(f"- 📁 **[{name}]({html_url})** - `{lang}` | ★ `{stars}` stars<br>_{desc}_")
+        count += 1
+        
+    if not lines:
+        return "- No recent repository activity found."
+    return "\n".join(lines)
+
 def fetch_profile_stats(token):
     # Fetch profile details
     profile = fetch_data("https://api.github.com/users/Vinay21rout", token)
@@ -88,7 +116,7 @@ def fetch_profile_stats(token):
     repos = fetch_data("https://api.github.com/users/Vinay21rout/repos?per_page=100", token)
     
     if not profile or not repos:
-        return ""
+        return {}
         
     followers = profile.get("followers", 0)
     public_repos = profile.get("public_repos", 0)
@@ -106,15 +134,20 @@ def fetch_profile_stats(token):
     sorted_langs = sorted(lang_count.items(), key=lambda x: x[1], reverse=True)
     primary_langs = ", ".join(lang for lang, count in sorted_langs[:5])
     
-    stats_lines = [
-        f"- **Public Repositories**: {public_repos}",
-        f"- **Total Stars Received**: {stars}",
-        f"- **Forks Created (Own Repos)**: {forks}",
-        f"- **Followers**: {followers}",
-        f"- **Primary Languages**: {primary_langs}"
-    ]
-    
-    return "\n".join(stats_lines)
+    return {
+        "public_repos": public_repos,
+        "stars": stars,
+        "forks": forks,
+        "followers": followers,
+        "primary_langs": primary_langs
+    }
+
+def get_last_updated():
+    # Convert UTC to IST (UTC + 5:30)
+    utc_now = datetime.now(timezone.utc)
+    ist_offset = timedelta(hours=5, minutes=30)
+    ist_now = utc_now + ist_offset
+    return f"🕒 *Last synced on: {ist_now.strftime('%A, %b %d, %Y at %I:%M %p')} (IST)*"
 
 def main():
     token = os.environ.get("GITHUB_TOKEN", "")
@@ -123,24 +156,54 @@ def main():
     print("Fetching recent public activity events...")
     recent_activity = fetch_recent_activity(token)
     
-    # 2. Fetch stats
-    print("Fetching profile statistics and language stats...")
-    profile_stats = fetch_profile_stats(token)
+    # 2. Fetch latest repos
+    print("Fetching latest active repositories...")
+    latest_repos = fetch_latest_repos(token)
     
-    # 3. Update README.md
+    # 3. Fetch stats
+    print("Fetching profile statistics...")
+    stats_data = fetch_profile_stats(token)
+    
+    # 4. Get last updated timestamp
+    last_updated = get_last_updated()
+    
+    # 5. Update README.md
     readme_path = "README.md"
     if os.path.exists(readme_path):
         try:
             with open(readme_path, "r", encoding="utf-8") as f:
                 content = f.read()
 
-            # Update stats block
-            stats_start = "<!-- STATS_LOG_START -->"
-            stats_end = "<!-- STATS_LOG_END -->"
-            if stats_start in content and stats_end in content:
-                start_idx = content.find(stats_start) + len(stats_start)
-                end_idx = content.find(stats_end)
-                content = content[:start_idx] + "\n" + profile_stats + "\n" + content[end_idx:]
+            # Update stats block if stats_data is valid
+            if stats_data:
+                # Update individual stats placeholders in dashboard
+                stats_lines = [
+                    f"- **Public Repositories**: {stats_data['public_repos']}",
+                    f"- **Total Stars Received**: {stats_data['stars']}",
+                    f"- **Forks Created (Own Repos)**: {stats_data['forks']}",
+                    f"- **Followers**: {stats_data['followers']}",
+                    f"- **Primary Languages**: {stats_data['primary_langs']}"
+                ]
+                profile_stats_text = "\n".join(stats_lines)
+                
+                stats_start = "<!-- STATS_LOG_START -->"
+                stats_end = "<!-- STATS_LOG_END -->"
+                if stats_start in content and stats_end in content:
+                    start_idx = content.find(stats_start) + len(stats_start)
+                    end_idx = content.find(stats_end)
+                    content = content[:start_idx] + "\n" + profile_stats_text + "\n" + content[end_idx:]
+
+                # Update live dashboard values if present as comments
+                def update_placeholder(text, start_tag, end_tag, new_val):
+                    if start_tag in text and end_tag in text:
+                        s_idx = text.find(start_tag) + len(start_tag)
+                        e_idx = text.find(end_tag)
+                        return text[:s_idx] + str(new_val) + text[e_idx:]
+                    return text
+                
+                content = update_placeholder(content, "<!-- DYNAMIC_REPOS_VAL -->", "<!-- DYNAMIC_REPOS_VAL_END -->", stats_data["public_repos"])
+                content = update_placeholder(content, "<!-- DYNAMIC_STARS_VAL -->", "<!-- DYNAMIC_STARS_VAL_END -->", stats_data["stars"])
+                content = update_placeholder(content, "<!-- DYNAMIC_FOLLOWERS_VAL -->", "<!-- DYNAMIC_FOLLOWERS_VAL_END -->", stats_data["followers"])
 
             # Update activity block
             act_start = "<!-- ACTIVITY_LOG_START -->"
@@ -150,23 +213,42 @@ def main():
                 end_idx = content.find(act_end)
                 content = content[:start_idx] + "\n" + recent_activity + "\n" + content[end_idx:]
 
+            # Update latest repos block
+            repos_start = "<!-- LATEST_REPOS_START -->"
+            repos_end = "<!-- LATEST_REPOS_END -->"
+            if repos_start in content and repos_end in content:
+                start_idx = content.find(repos_start) + len(repos_start)
+                end_idx = content.find(repos_end)
+                content = content[:start_idx] + "\n" + latest_repos + "\n" + content[end_idx:]
+
+            # Update last updated block
+            lu_start = "<!-- LAST_UPDATED_START -->"
+            lu_end = "<!-- LAST_UPDATED_END -->"
+            if lu_start in content and lu_end in content:
+                start_idx = content.find(lu_start) + len(lu_start)
+                end_idx = content.find(lu_end)
+                content = content[:start_idx] + "\n" + last_updated + "\n" + content[end_idx:]
+
             with open(readme_path, "w", encoding="utf-8") as f:
                 f.write(content)
             print("Successfully updated README.md.")
 
-            # Commit and push changes back
-            subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"], check=True)
-            subprocess.run(["git", "config", "--global", "user.email", "41898282+github-actions[bot]@users.noreply.github.com"], check=True)
-            subprocess.run(["git", "add", "README.md"], check=True)
-            
-            # Check if there are changes before committing
-            status = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True)
-            if status.stdout.strip():
-                subprocess.run(["git", "commit", "-m", "chore: sync GitHub metrics and activity [skip ci]"], check=True)
-                subprocess.run(["git", "push"], check=True)
-                print("Committed and pushed updates.")
+            # Commit and push changes back (if inside GitHub Actions)
+            if os.environ.get("GITHUB_ACTIONS") == "true":
+                subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"], check=True)
+                subprocess.run(["git", "config", "--global", "user.email", "41898282+github-actions[bot]@users.noreply.github.com"], check=True)
+                subprocess.run(["git", "add", "README.md"], check=True)
+                
+                # Check if there are changes before committing
+                status = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True)
+                if status.stdout.strip():
+                    subprocess.run(["git", "commit", "-m", "chore: sync GitHub metrics and activity [skip ci]"], check=True)
+                    subprocess.run(["git", "push"], check=True)
+                    print("Committed and pushed updates.")
+                else:
+                    print("No changes to commit.")
             else:
-                print("No changes to commit.")
+                print("Running locally. Skipping Git commit/push.")
         except Exception as e:
             print(f"Error modifying files/pushing to Git: {e}")
 
