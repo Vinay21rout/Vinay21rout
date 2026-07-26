@@ -38,7 +38,7 @@ Hi 👋 I'm **Vinay Kumar Rout**, a B.Tech AI/ML student at **O.P. Jindal Univer
     </td>
     <td align="center" width="25%" style="background: #111827; border: 1px solid #374151; border-radius: 6px; padding: 10px;">
       <span style="color: #9ca3af; font-size: 0.9em;">Total Repos</span><br>
-      <strong style="font-size: 1.5em; color: #10b981;"><!-- DYNAMIC_REPOS_VAL -->26<!-- DYNAMIC_REPOS_VAL_END --></strong>
+      <strong style="font-size: 1.5em; color: #10b981;"><!-- DYNAMIC_REPOS_VAL -->27<!-- DYNAMIC_REPOS_VAL_END --></strong>
     </td>
     <td align="center" width="25%" style="background: #111827; border: 1px solid #374151; border-radius: 6px; padding: 10px;">
       <span style="color: #9ca3af; font-size: 0.9em;">Hackathons Entered</span><br>
@@ -149,23 +149,23 @@ Hi 👋 I'm **Vinay Kumar Rout**, a B.Tech AI/ML student at **O.P. Jindal Univer
 
 ### ⚡ Recent GitHub Activity
 <!-- ACTIVITY_LOG_START -->
+- 🌿 Created branch `main` in `perplexity-browsing-agent`
 - 🌿 Created branch `main` in `Perplexity-style-browsing-agent`
 - 🌿 Created branch `main` in `flyrank-internship`
-- 🌿 Created branch `main` in `odoo-hackathon`
 <!-- ACTIVITY_LOG_END -->
 
 ### 📁 Recently Updated Repositories
 <!-- LATEST_REPOS_START -->
+- 📁 **[perplexity-browsing-agent](https://github.com/Vinay21rout/perplexity-browsing-agent)** - `JavaScript` | ★ `0` stars<br>_Building intelligent systems._
 - 📁 **[Vinay21rout](https://github.com/Vinay21rout/Vinay21rout)** - `Python` | ★ `0` stars<br>_Building intelligent systems._
 - 📁 **[Perplexity-style-browsing-agent](https://github.com/Vinay21rout/Perplexity-style-browsing-agent)** - `Python` | ★ `0` stars<br>_Building intelligent systems._
 - 📁 **[flyrank-internship](https://github.com/Vinay21rout/flyrank-internship)** - `Jupyter Notebook` | ★ `0` stars<br>_Building intelligent systems._
 - 📁 **[30DaysOfAI](https://github.com/Vinay21rout/30DaysOfAI)** - `Jupyter Notebook` | ★ `0` stars<br>_Building intelligent systems._
-- 📁 **[odoo-hackathon](https://github.com/Vinay21rout/odoo-hackathon)** - `HTML` | ★ `0` stars<br>_Building intelligent systems._
 <!-- LATEST_REPOS_END -->
 
 ### 📊 Live GitHub Metrics
 <!-- STATS_LOG_START -->
-- **Public Repositories**: 26
+- **Public Repositories**: 27
 - **Total Stars Received**: 0
 - **Forks Created (Own Repos)**: 0
 - **Followers**: 0
@@ -175,7 +175,7 @@ Hi 👋 I'm **Vinay Kumar Rout**, a B.Tech AI/ML student at **O.P. Jindal Univer
 ---
 
 <!-- LAST_UPDATED_START -->
-🕒 *Last synced on: Sunday, Jul 26, 2026 at 09:02 AM (IST)*
+🕒 *Last synced on: Sunday, Jul 26, 2026 at 02:03 PM (IST)*
 <!-- LAST_UPDATED_END -->
 
 <div align="center">
