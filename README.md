@@ -38,7 +38,7 @@ Hi 👋 I'm **Vinay Kumar Rout**, a B.Tech AI/ML student at **O.P. Jindal Univer
     </td>
     <td align="center" width="25%" style="background: #111827; border: 1px solid #374151; border-radius: 6px; padding: 10px;">
       <span style="color: #9ca3af; font-size: 0.9em;">Total Repos</span><br>
-      <strong style="font-size: 1.5em; color: #10b981;"><!-- DYNAMIC_REPOS_VAL -->27<!-- DYNAMIC_REPOS_VAL_END --></strong>
+      <strong style="font-size: 1.5em; color: #10b981;"><!-- DYNAMIC_REPOS_VAL -->28<!-- DYNAMIC_REPOS_VAL_END --></strong>
     </td>
     <td align="center" width="25%" style="background: #111827; border: 1px solid #374151; border-radius: 6px; padding: 10px;">
       <span style="color: #9ca3af; font-size: 0.9em;">Hackathons Entered</span><br>
@@ -154,16 +154,16 @@ Hi 👋 I'm **Vinay Kumar Rout**, a B.Tech AI/ML student at **O.P. Jindal Univer
 
 ### 📁 Recently Updated Repositories
 <!-- LATEST_REPOS_START -->
+- 📁 **[cashflow-copilot](https://github.com/Vinay21rout/cashflow-copilot)** - `HTML` | ★ `0` stars<br>_Building intelligent systems._
 - 📁 **[Vinay21rout](https://github.com/Vinay21rout/Vinay21rout)** - `Python` | ★ `0` stars<br>_Building intelligent systems._
 - 📁 **[Portfolio-website](https://github.com/Vinay21rout/Portfolio-website)** - `HTML` | ★ `0` stars<br>_Building intelligent systems._
 - 📁 **[perplexity-browsing-agent](https://github.com/Vinay21rout/perplexity-browsing-agent)** - `JavaScript` | ★ `0` stars<br>_Building intelligent systems._
 - 📁 **[Perplexity-style-browsing-agent](https://github.com/Vinay21rout/Perplexity-style-browsing-agent)** - `Python` | ★ `0` stars<br>_Building intelligent systems._
-- 📁 **[flyrank-internship](https://github.com/Vinay21rout/flyrank-internship)** - `Jupyter Notebook` | ★ `0` stars<br>_Building intelligent systems._
 <!-- LATEST_REPOS_END -->
 
 ### 📊 Live GitHub Metrics
 <!-- STATS_LOG_START -->
-- **Public Repositories**: 27
+- **Public Repositories**: 28
 - **Total Stars Received**: 0
 - **Forks Created (Own Repos)**: 0
 - **Followers**: 0
@@ -173,7 +173,7 @@ Hi 👋 I'm **Vinay Kumar Rout**, a B.Tech AI/ML student at **O.P. Jindal Univer
 ---
 
 <!-- LAST_UPDATED_START -->
-🕒 *Last synced on: Saturday, Oct 17, 2026 at 03:55 PM (IST)*
+🕒 *Last synced on: Saturday, Oct 17, 2026 at 08:49 PM (IST)*
 <!-- LAST_UPDATED_END -->
 
 <div align="center">
